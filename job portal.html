@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareerPulse | Modern Job Board</title>
+    <link rel="stylesheet" href="job portal.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="logo">Career<span>Pulse</span></div>
+            <ul class="nav-links">
+                <li><a href="#" class="active">Find Jobs</a></li>
+                <li><a href="#">Companies</a></li>
+                <li><a href="#">Salaries</a></li>
+                <button class="login-btn">Sign In</button>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <h1>Discover your next <span>career move</span></h1>
+        <p>Browse through thousands of high-quality job listings from top companies.</p>
+        <div class="search-box">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" id="searchInput" placeholder="Search job titles, skills, or companies..." onkeyup="filterJobs()">
+            <button class="search-btn">Search</button>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="section-header">
+            <h2>Recommended Jobs</h2>
+            <span id="jobCount">Showing all listings</span>
+        </div>
+        
+        <div id="jobGrid" class="job-grid">
+            </div>
+    </main>
+
+    <div id="applyModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Submit Application</h2>
+            <p id="modalSubtext">Applying for: <strong id="jobTitleLabel"></strong></p>
+            <form id="applicationForm">
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" placeholder="Enter your name" required>
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" placeholder="email@example.com" required>
+                </div>
+                <div class="form-group">
+                    <label>Resume (Link)</label>
+                    <input type="url" placeholder="Portfolio or Drive link" required>
+                </div>
+                <button type="submit" class="submit-btn">Send Application</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="job portal.js"></script>
+</body>
+</html> 
